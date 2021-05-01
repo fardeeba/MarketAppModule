@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Font">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">normal</item>
+        <!--<item name="android:lineSpacingExtra">2dp</item>-->
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/editTextHint</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.02</item>
+    </style>
+
+    <style name="Title" parent="BoldFont">
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.02</item>
+    </style>
+
+    <style name="Normal" parent="Font">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.02</item>
+    </style>
+
+    <style name="Medium" parent="Normal">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Large" parent="Normal">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="BoldFont" parent="Font">
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="BoldFontLarge" parent="Font">
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+    <style name="CapsLightFont" parent="Normal">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.04</item>
+    </style>
+
+    <style name="Tag" parent="CapsLightFont">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+
+    <style name="ButtonFont" parent="BoldFont">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.04</item>
+    </style>
+
+    <style name="Label" parent="CapsLightFont">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="LabelLarge" parent="CapsLightFont">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ButtonFontRed" parent="ButtonFont">
+        <item name="android:textColor">@color/redColor</item>
+    </style>
+
+    <style name="Light" parent="Normal">
+        <item name="android:textColor">@color/color_light_grey</item>
+    </style>
+
+    <style name="LightLarge" parent="Normal">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/color_light_grey</item>
+    </style>
+
+    <style name="Warning" parent="Normal">
+        <item name="android:textColor">@color/redColor</item>
+    </style>
+
+    <style name="PanelTitle" parent="SectionHeaderFont">
+
+    </style>
+
+    <style name="PageTitleFont" parent="BoldFont">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.04</item>
+        <item name="android:gravity">center</item>             
+        <item name="android:textColor">@color/headerTextColor</item>
+    </style>
+
+    <style name="PageTitleBar" parent="PageTitleFont">
+    </style>
+
+    <!--<style name="StatusBar" parent="PageTitleFont">-->
+        <!--<item name="android:background">@drawable/gradient_background</item>-->
+        <!--<item name="android:layout_height">@dimen/statusBarHeight</item>-->
+        <!--<item name="android:layout_width">match_parent</item>-->
+        <!--<item name="android:translationZ">@dimen/toolbarElevation</item>-->
+    <!--</style>-->
+
+    <style name="DarkButtonFont" parent="Font">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.04</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/rounded_corners_button</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.04</item>
+        <item name="android:layout_height">@dimen/buttonHeight</item>
+    </style>
+
+
+
+    <style name="PrimaryButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/rounded_corners_button</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing" tools:targetApi="21">0.04</item>
+        <item name="android:layout_height">@dimen/buttonHeight</item>
+    </style>
+
+    <style name="SectionHeaderFont" parent="BoldFont">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/sectionHeaderTextColor</item>
+    </style>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="colorControlNormal">@color/background</item>
+        <item name="colorControlActivated">@color/secondaryColor</item>
+        <item name="colorControlHighlight">@color/secondaryColor</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:colorEdgeEffect">@android:color/darker_gray</item>
+
+    </style>
+
+    <style name="MainActivityTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="GreyBackgroundTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <style name="WhiteBackgroundTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="TransparentPopup" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="colorControlNormal">@color/background</item>
+        <item name="colorControlActivated">@color/secondaryColor</item>
+        <item name="colorControlHighlight">@color/secondaryColor</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/light_black</item>
+        <item name="colorControlActivated">@color/secondaryColor</item>
+    </style>
+
+
+</resources>

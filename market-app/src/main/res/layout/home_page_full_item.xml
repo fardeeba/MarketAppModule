@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/marginVerySmall"
+    android:layout_marginTop="@dimen/marginMedium"
+    android:layout_marginEnd="@dimen/marginVerySmall"
+    android:clipToPadding="false"
+    android:padding="6dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_white_10"
+        android:elevation="2dp"
+        android:padding="2dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:roundedCornerRadius="@dimen/cornerRadius"
+            fresco:placeholderImage="@drawable/placeholder"
+            fresco:placeholderImageScaleType="centerInside"
+            fresco:overlayImage="@color/homePageTransparency" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/textLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/BoldFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="This is a text"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

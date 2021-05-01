@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--<TextView-->
+        <!--android:id="@+id/title"-->
+        <!--style="@style/PageTitleBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/titleHeight"-->
+        <!--android:background="@drawable/gradient_background"-->
+        <!--android:elevation="@dimen/toolbarElevation"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/my_basket" />-->
+
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginVerySmall"
+        style="@style/Warning"
+        android:paddingRight="@dimen/marginSmall"
+        android:paddingLeft="@dimen/marginSmall"
+        android:id="@+id/specialNotesText"
+        android:text="@string/special_note"
+        android:textSize="16sp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/specialNotesText"
+        android:layout_above="@id/specialNotes"
+        android:clipToPadding="false"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <com.skylarksit.module.ui.components.ProductListView
+                android:id="@+id/basketProducts"
+                android:visibility="gone"
+                android:background="@color/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.skylarksit.module.ui.components.ProductListView>
+
+            <com.skylarksit.module.ui.components.ProductListView
+                android:id="@+id/basket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.skylarksit.module.ui.components.ProductListView>
+
+            <!--<TextView-->
+                <!--android:id="@+id/basketBottomButton"-->
+                <!--style="@style/Normal"-->
+                <!--android:textSize="14sp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="@dimen/titleHeight"-->
+                <!--android:text="@string/suggest_item"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingBottom="@dimen/marginNormal"-->
+                <!--android:textColor="@color/textButtonColor"/>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/layout"-->
+                <!--android:elevation="2dp"-->
+                <!--android:paddingLeft="4dp"-->
+                <!--android:paddingRight="4dp"-->
+                <!--android:layout_marginLeft="@dimen/marginSmall"-->
+                <!--android:layout_marginRight="@dimen/marginSmall"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:background="@drawable/rounded_corners_white_10"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/marginSmall"-->
+                <!--android:orientation="vertical"/>-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/cartTitle"-->
+            <!--android:text="Cart Title"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:layout_marginRight="2dp"-->
+            <!--style="@style/SectionHeaderFont"-->
+            <!--/>-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/viewStore"-->
+            <!--style="@style/ButtonFont"-->
+            <!--android:visibility="gone"-->
+            <!--android:textColor="@color/primaryColor"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:elevation="@dimen/toolbarElevation"-->
+            <!--android:paddingLeft="@dimen/marginNormal"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:layout_marginRight="2dp"-->
+            <!--android:text="View Store" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_below="@id/specialNotes"-->
+            <!--android:id="@+id/checkoutInformation"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/marginVerySmall"-->
+            <!--android:orientation="vertical">-->
+            <!--</LinearLayout>-->
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:background="@color/white"
+        android:layout_above="@id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        style="@style/BoldFont"
+        android:gravity="center_vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingRight="@dimen/marginSmall"
+        android:paddingLeft="@dimen/marginSmall"
+        android:id="@+id/specialNotes"
+        android:text="@string/special_note"
+        android:textSize="14sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottomBarHeight"
+        >
+
+        <RelativeLayout
+            android:background="@drawable/checkout_bar_bg"
+            android:id="@+id/bottomTextLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:elevation="6dp"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/totalItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 Items"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    style="@style/BoldFont"
+                    />
+
+                <TextView
+                    android:id="@+id/totalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5000 LBP"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    style="@style/BoldFont"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/totalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/checkout"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                style="@style/BoldFont"
+                android:layout_toStartOf="@id/arrowRight"
+                />
+
+            <ImageView
+                android:id="@+id/arrowRight"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="6dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="4dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/arrow_right"
+                android:tint="@color/buttonTextColor"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

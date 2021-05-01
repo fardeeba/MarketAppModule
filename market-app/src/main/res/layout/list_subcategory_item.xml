@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout"
+        android:elevation="2dp"
+        android:layout_height="46dp"
+        android:focusable="false"
+        android:background="@drawable/rounded_corners_white_10">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerInside"
+            fresco:placeholderImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/placeholder"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_toEndOf="@id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginSmall"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:text="HOME"
+            android:textSize="14sp"
+            style="@style/BoldFont"
+            />
+
+        <TextView
+            android:id="@+id/actionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/marginSmall"
+            android:maxLines="1"
+            android:layout_alignParentEnd="true"
+            android:text="HOME"
+            style="@style/BoldFont"
+            />
+
+        <include layout="@layout/comp_line" android:id="@+id/line" android:layout_height="wrap_content" android:layout_width="match_parent"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

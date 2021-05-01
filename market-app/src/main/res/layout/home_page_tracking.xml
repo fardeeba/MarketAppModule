@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginStart="@dimen/marginSmall"
+    android:layout_marginTop="@dimen/marginSmall"
+    android:layout_marginEnd="@dimen/marginSmall"
+    android:background="@drawable/rounded_corners_white_10"
+    android:clipToPadding="false"
+    android:elevation="1dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        fresco:placeholderImage="@drawable/motorcycle"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:roundAsCircle="true" />
+
+    <ImageView
+        android:id="@+id/imageSingle"
+        android:visibility="gone"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:padding="12dp"
+        android:src="@drawable/motorcycle"
+        android:tint="@color/secondaryColor"
+        >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/marginVerySmall"
+        android:layout_marginBottom="@dimen/marginVerySmall"
+        android:layout_marginStart="70dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/pending_confirmation"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/etaLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Light"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/marginVerySmall"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/eta"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/eta"
+                style="@style/Light"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Wakilni"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/etaTimeLayout"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/marginVerySmall"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/etaMins"
+            style="@style/BoldFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:gravity="center_horizontal|bottom"
+            android:maxLines="1"
+            android:text="@string/_20_mins"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="24sp" />
+
+
+        <TextView
+            style="@style/Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etaMins"
+            android:layout_gravity="center_horizontal|top"
+            android:gravity="center_horizontal|top"
+            android:maxLines="1"
+            android:text="@string/minutes"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

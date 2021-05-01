@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.skylarksit.module"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:usesCleartextTraffic="true"
+        android:name=".MarketplaceApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="allowBackup,supportsRtl">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCZkUs6mR_WOJzzhzZsiqWHGSFIZ0jsI94" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+       <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f584c98c88d16ab834a1ef66add6261df94e0e9f" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="true"/>
+
+        <meta-data android:name="com.facebook.sdk.AutoInitEnabled"
+            android:value="true"/>
+
+        <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="true"/>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_name" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/buttonColor" />
+
+        <!-- Branch init -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="@string/branch_key_prod" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="@string/branch_key_test" />
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="false" />
+`
+        <!-- Branch install referrer tracking -->
+        <receiver
+            android:name="io.branch.referral.InstallListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".BaseActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Branch App Links -->
+            <intent-filter>
+                <data android:host="open"
+                    android:scheme="@string/uriScheme" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- Branch App Links -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="@string/branch_link"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainActivityTheme"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <service android:name=".gcm.MyFcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity
+            android:label="Stores"
+            android:name=".ui.activities.hyperlocal.ProvidersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteBackgroundTheme" />
+        <activity
+            android:label="Profile"
+            android:name=".ui.activities.main.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Addresses"
+            android:name=".ui.activities.main.MyAddressesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Favorites"
+            android:name=".ui.activities.main.FavoritesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Sotre"
+            android:name=".ui.activities.hyperlocal.FinalGridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:label="Previous Orders"
+            android:name=".ui.activities.hyperlocal.PurchaseOrdersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Settings"
+            android:name=".ui.activities.settings.SettingsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Basket"
+            android:name=".ui.activities.hyperlocal.BasketActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:label="Create Address Pin"
+            android:name=".ui.activities.main.CreateEddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:label="Credit Cards"
+            android:name=".ui.activities.hyperlocal.AddCreditCardMPGSActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:label="Edit Address"
+            android:name=".ui.activities.main.EditEddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:label="Create Address Name"
+            android:name=".ui.activities.main.NicknameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Order Created"
+            android:name=".ui.activities.hyperlocal.OrderCompletedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Select Address"
+            android:name=".ui.activities.hyperlocal.EddressPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Add Credit Card"
+            android:name=".ui.activities.hyperlocal.AddCreditCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:label="Product Details"
+            android:name=".ui.activities.hyperlocal.ProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:label="Login"
+            android:name=".ui.activities.core.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:label="Select Time"
+            android:name=".ui.activities.TimePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Checkout"
+            android:name=".ui.activities.hyperlocal.CheckoutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Personal Info"
+            android:name=".ui.activities.hyperlocal.UserDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Pick &amp; Drop"
+            android:name=".ui.activities.hyperlocal.PickDropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GreyBackgroundTheme" />
+        <activity
+            android:label="Advertisement Popup"
+            android:name=".ui.utils.LightBox"
+            android:theme="@style/TransparentPopup" />
+        <activity
+            android:label="Feedback Popup"
+            android:name=".ui.utils.FeedbackPopup"
+            android:theme="@style/TransparentPopup" />
+
+        <activity android:label="Payment Methods" android:name=".ui.activities.main.MyPaymentMethodsActivity" />
+        <activity android:label="Product Image" android:name=".ui.activities.SharedElementLaunchedActivity" />
+
+    </application>
+
+</manifest>

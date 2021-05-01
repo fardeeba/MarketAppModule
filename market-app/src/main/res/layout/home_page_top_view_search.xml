@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:id="@+id/searchTextBox"
+        style="@style/Normal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/marginSmall"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rounded_corners_white_10"
+        android:cursorVisible="false"
+        android:elevation="@dimen/elevation"
+        android:hint="@string/hint_search_shops_products"
+        android:paddingStart="@dimen/marginSmall"
+        android:paddingEnd="@dimen/marginSmall"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_below="@id/searchTextBox"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:layout_marginTop="@dimen/marginVerySmall"
+        android:layout_marginEnd="@dimen/marginSmall"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/openButton"
+            style="@style/Light"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corners_grey"
+            android:elevation="0dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:stateListAnimator="@null"
+            android:text="@string/open_now" />
+
+        <Button
+            android:id="@+id/filtersButton"
+            style="@style/Light"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/marginVerySmall"
+            android:background="@drawable/rounded_corners_grey"
+            android:elevation="0dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:stateListAnimator="@null"
+            android:text="@string/filters" />
+
+    </LinearLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/filters"-->
+    <!--android:layout_below="@id/searchTextBox"-->
+    <!--android:paddingTop="@dimen/marginVerySmall"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:clipToPadding="false"-->
+    <!--android:paddingStart="@dimen/marginSmall"-->
+    <!--android:paddingEnd="@dimen/marginSmall"-->
+    <!--android:paddingBottom="@dimen/marginVerySmall"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <!--<com.nex3z.flowlayout.FlowLayout-->
+    <!--android:id="@+id/textBox"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_below="@id/searchTextBox"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--map:flChildSpacing="6dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginStart="@dimen/marginSmall"-->
+    <!--android:layout_marginEnd="@dimen/marginSmall"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--map:flRowSpacing="6dp">-->
+
+    <!--<TextView-->
+    <!--style="@style/Normal"-->
+    <!--android:id="@+id/deliveryText"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Delivering to"-->
+    <!--android:textSize="17sp"-->
+    <!--/>-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/changeLocationText"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--style="@style/BoldFont"-->
+    <!--android:text="Badaro"-->
+    <!--android:textColor="@color/textButtonColor"-->
+    <!--android:textSize="17sp"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--style="@style/Normal"-->
+    <!--android:id="@+id/inText"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="in"-->
+    <!--android:textSize="17sp"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/etaText"-->
+    <!--style="@style/BoldFont"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_toEndOf="@id/changeLocationText"-->
+    <!--android:text="6 minutes"-->
+    <!--android:textSize="17sp"-->
+    <!--/>-->
+
+    <!--</com.nex3z.flowlayout.FlowLayout>-->
+
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:text="@string/choose_a_date" />
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleLabel"
+        android:layout_marginStart="@dimen/marginBig"
+        android:layout_marginEnd="@dimen/marginBig"
+        android:clipToPadding="false"
+        android:listSelector="@android:color/transparent"
+        android:paddingTop="@dimen/marginNormal"
+        android:paddingBottom="@dimen/marginNormal"
+        android:scrollbars="none" />
+
+</RelativeLayout>

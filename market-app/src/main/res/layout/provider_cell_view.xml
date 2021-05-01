@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/marginSmall"
+    android:clipToPadding="false"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <RelativeLayout
+        android:id="@+id/imageBox"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners_white_10"
+        android:elevation="@dimen/elevation">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/serviceImage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            fresco:roundedCornerRadius="@dimen/cornerRadius" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageBox"
+        android:layout_marginTop="6dp">
+
+        <LinearLayout
+            android:id="@+id/infoBox"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/priceImage"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/dollar"
+                android:tint="@color/primaryTextColor" />
+
+            <TextView
+                android:id="@+id/priceTagTextView"
+                style="@style/Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textColor="@color/secondaryColor"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/etaImage"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/time_left"
+                android:tint="@color/primaryTextColor" />
+
+            <TextView
+                android:id="@+id/etaLabel"
+                style="@style/Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:text="@string/next_day"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/deliveryPriceImage"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/delivery"
+                android:tint="@color/primaryTextColor" />
+
+            <TextView
+                android:id="@+id/deliveryPriceLabel"
+                style="@style/Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_delivery"
+                android:gravity="start"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/serviceDescription"
+            style="@style/Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoBox"
+            android:layout_marginTop="2dp"
+            android:text="Testing something important" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/specialNote"-->
+        <!--style="@style/Warning"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:paddingStart="20dp"-->
+        <!--android:paddingEnd="20dp"-->
+        <!--android:text="This is a special note not to be ignored. This is a special note not to be ignored. This is a special note not to be ignored."-->
+        <!--android:visibility="gone" />-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

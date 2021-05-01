@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/buttonHeight"
+    android:layout_marginEnd="6dp"
+    android:clipToPadding="false"
+    android:padding="2dp">
+
+    <Button
+        android:id="@+id/tipOptionButton"
+        style="@style/Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:elevation="1dp"
+        android:background="@drawable/rounded_corners_white_10"
+        android:minWidth="60dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textAlignment="center" />
+
+</RelativeLayout>

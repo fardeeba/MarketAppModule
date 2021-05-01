@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/formItemHeight"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <RelativeLayout
+            android:id="@+id/priceBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/marginVerySmall">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                android:tag="productImage"
+                app:placeholderImage="@drawable/placeholder" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/itemCounterText"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@id/priceBox"
+            android:tag="counter"
+            android:text="10x"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/itemCounterText"
+            android:maxLines="2"
+            android:layout_toStartOf="@id/priceText"
+            android:tag="label"
+            android:text="Peps 1l" />
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:tag="field"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:text="6$"
+            style="@style/Normal"
+            />
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/bottom_wrapper"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:paddingStart="10dp"-->
+        <!--android:paddingEnd="4dp"-->
+        <!--&gt;-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/deleteItem"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:src="@drawable/remove_item"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:padding="8dp"-->
+        <!--&gt;-->
+        <!--</ImageView>-->
+
+        <!--</RelativeLayout>-->
+
+        <include
+            android:id="@+id/line"
+            layout="@layout/comp_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation">
+
+        <TextView
+            android:id="@+id/titleText"
+            style="@style/PageTitleFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/payment_methods" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/paymentMethodsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleLayout"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="20dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/addCreditCard"
+        style="@style/ButtonPrimary"
+        android:layout_margin="@dimen/marginBig"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/add_card" />
+
+</RelativeLayout>
+

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <TextView
+        android:id="@+id/titleBar"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:text="@string/edit_address" />
+
+
+    <RelativeLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/titleHeight"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:background="@color/background"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/saveButton"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/mapParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/marginVerySmall">
+
+                <RelativeLayout
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <fragment
+                        android:id="@+id/eddressMap"
+                        android:name="com.google.android.gms.maps.MapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mapHeight"
+                        map:cameraZoom="13" />
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:clipToPadding="false"
+                    android:paddingBottom="1dp">
+
+                    <TextView
+                        android:id="@+id/updatePin"
+                        style="@style/ButtonFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="180dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/rounded_corners_button_white"
+                        android:elevation="1dp"
+                        android:gravity="center"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:text="@string/update_pin" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="@dimen/marginNormal"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/area" />
+
+                <EditText
+                    android:id="@+id/areaField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@android:color/white"
+                    android:hint="@string/hint_area"
+                    android:maxLines="1"
+                    android:textColorHint="@color/editTextHint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="@dimen/marginNormal"
+                android:background="@android:color/white">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/building" />
+
+                <EditText
+                    android:id="@+id/buildingField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@android:color/white"
+                    android:hint="@string/hint_building"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColorHint="@color/editTextHint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="@dimen/marginNormal"
+                android:background="@android:color/white">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/apt_unit" />
+
+                <EditText
+                    android:id="@+id/aptField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@android:color/white"
+                    android:hint="@string/hint_app_unit"
+                    android:imeOptions="actionDone"
+                    android:maxLength="25"
+                    android:maxLines="1"
+
+                    android:textColorHint="@color/editTextHint" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="@dimen/marginNormal"
+                android:background="@drawable/rounded_corners_white_10_bottom">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/more_info" />
+
+                <EditText
+                    android:id="@+id/moreInfoField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@android:color/white"
+                    android:hint="@string/hint_more_info"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:paddingEnd="10dp"
+                    android:textColorHint="@color/editTextHint" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/deleteEddressButton"
+                style="@style/BoldFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:layout_gravity="center"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="@dimen/marginSmall"
+                android:gravity="center"
+                android:text="@string/delete_address"
+                android:textColor="@color/redColor" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/saveButton"
+        style="@style/ButtonPrimary"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/marginSmall"
+        android:text="@string/save_address" />
+
+    <RelativeLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/titleHeight">
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/close"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

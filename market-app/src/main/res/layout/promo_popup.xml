@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginBig"
+        android:layout_marginEnd="@dimen/marginBig"
+        android:background="@drawable/rounded_corners_white_10"
+        android:elevation="8dp"
+        android:minWidth="300dp"
+        android:orientation="vertical"
+        android:padding="@dimen/marginNormal">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            style="@style/BoldFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/promo_code"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/dialog_message"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginSmall"
+            android:text="@string/hint_enter_promocode"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/formItemHeight"
+            android:layout_marginTop="@dimen/marginNormal"
+            android:background="@drawable/rounded_corners_white_10"
+            android:elevation="1dp">
+
+            <EditText
+                android:id="@+id/promoCodeText"
+                style="@style/LightLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners_grey"
+                android:gravity="center|start"
+                android:hint="@string/enter_promo_code"
+                android:inputType="textCapCharacters"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirmButton"
+        style="@style/PrimaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:background="@drawable/rounded_corners_button"
+        android:elevation="4dp"
+        android:minWidth="180dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/apply_promo_code" />
+
+    <TextView
+        android:id="@+id/cancelButton"
+        style="@style/ButtonFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="60dp"
+        android:gravity="center"
+        android:minWidth="80dp"
+        android:text="@string/cancel"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:text="@string/addCreditCard" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:paddingTop="@dimen/marginNormal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginNormal"
+            android:layout_marginEnd="@dimen/marginNormal"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:background="@drawable/rounded_corners_white_10_top">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/card_no" />
+
+                <EditText
+                    android:id="@+id/creditCardField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@color/white"
+                    android:hint="4454 8878 9987 4547"
+                    android:inputType="number"
+                    android:maxLines="1" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/expiry_date" />
+
+                <EditText
+                    android:id="@+id/expiryField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@color/white"
+                    android:hint="@string/mm_yy"
+                    android:inputType="number"
+                    android:maxLines="1" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/rounded_corners_white_10_bottom">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/cvv" />
+
+                <EditText
+                    android:id="@+id/cvv"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@color/white"
+                    android:hint="161"
+                    android:inputType="number"
+                    android:maxLines="1" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:text="@string/authorization_message_from_bank" />
+
+            <Button
+                android:id="@+id/addCreditCard"
+                style="@style/ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/marginBig"
+                android:text="@string/add_card" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+

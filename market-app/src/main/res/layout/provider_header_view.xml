@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/marginVerySmall">
+
+
+    <RelativeLayout
+        android:id="@+id/imageBox"
+        android:layout_width="match_parent"
+        android:layout_height="190dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/serviceImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/placeholder_wide"
+            fresco:placeholderImageScaleType="centerInside" />
+
+        <com.skylarksit.module.ui.components.ClippedCurvedView
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/textBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_corners_white_10"
+        android:elevation="1dp"
+        android:gravity="center_horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/etaLabel"
+            style="@style/BoldFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/next_day"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/openingHours"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etaLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:text="@string/mon_to_friday"
+            android:textSize="13sp" />
+
+        <!--<TextView android:text="CURRENTLY CLOSED"-->
+        <!--android:id="@+id/closedText"-->
+        <!--android:layout_below="@id/specialNote"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--style="@style/SemiBold"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
+
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:layout_marginStart="@dimen/marginBig"-->
+    <!--android:layout_marginEnd="@dimen/marginBig"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_below="@id/textBox">-->
+
+    <!--&lt;!&ndash;<ImageView android:layout_width="12dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/etaImage"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="12dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/time"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/serviceTextDesc"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:text="Testing something important"-->
+    <!--style="@style/Normal"-->
+    <!--android:textSize="16sp"-->
+    <!--/>-->
+
+    <!--<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+    <!--style="@style/Warning"-->
+    <!--android:id="@+id/specialNote"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_below="@id/serviceTextDesc"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="@dimen/marginVerySmall"-->
+    <!--android:layout_marginBottom="@dimen/marginVerySmall"-->
+    <!--android:text="Special Note."-->
+    <!--android:textSize="16sp"-->
+    <!--/>-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/searchButtonHeader"-->
+        <!--android:layout_width="56dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:background="@color/transparent"-->
+        <!--android:elevation="@dimen/elevation"-->
+        <!--android:paddingTop="16dp"-->
+        <!--android:paddingBottom="16dp"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:src="@drawable/search_thick"-->
+        <!--android:tint="@color/white"-->
+        <!--android:tintMode="src_atop" />-->
+
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/shortcutButton"-->
+    <!--android:elevation="4dp"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:tint="@color/white"-->
+    <!--android:tintMode="src_atop"-->
+    <!--android:layout_height="@dimen/titleHeight"-->
+    <!--android:layout_toStartOf="@id/searchButton"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:scaleType="fitCenter"-->
+    <!--android:paddingTop="14dp"-->
+    <!--android:paddingBottom="14dp"-->
+
+    <!--android:src="@drawable/cateogries" />-->
+
+</RelativeLayout>

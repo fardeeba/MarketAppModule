@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:gravity="center"
+        android:text="@string/missing_items" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/specialNotes"
+                style="@style/Warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/marginSmall"
+                android:layout_marginTop="@dimen/marginSmall"
+                android:layout_marginEnd="@dimen/marginSmall"
+                android:gravity="center_horizontal"
+                android:text="@string/special_note"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/specialNotes"
+                android:layout_marginTop="@dimen/marginSmall"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/marginSmall"
+        android:background="@drawable/rounded_corners_button"
+        android:elevation="@dimen/elevation"
+        android:gravity="center_horizontal"
+        android:minWidth="130dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="30dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="4dp"
+            android:src="@drawable/cart_icon_white"
+            android:tint="@color/buttonTextColor" />
+
+        <TextView
+            style="@style/DarkButtonFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:minWidth="20dp"
+            android:text="@string/confirm"
+            android:textSize="14sp"
+
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

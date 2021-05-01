@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.activities.hyperlocal.EddressPickerActivity">
+
+
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:text="@string/choose_a_location" />
+
+    <RelativeLayout
+        android:layout_below="@id/titleLabel"
+        android:id="@+id/subtitle"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="@dimen/marginSmall"
+            android:id="@+id/descriptionText"
+            style="@style/BoldFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/address_note_while_servie"
+            android:textSize="16sp" />
+
+        <include
+            android:layout_below="@id/descriptionText"
+            android:id="@+id/line"
+            layout="@layout/comp_line_secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/searchResultList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/subtitle"
+        android:clipToPadding="false"
+        android:divider="@color/background"
+        android:isScrollContainer="false"
+        android:listSelector="@android:color/transparent"
+        android:paddingTop="@dimen/marginNormal"
+        android:paddingBottom="60dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/addNewAddress"
+        style="@style/ButtonPrimary"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/marginSmall"
+        android:onClick="newLocationHandler"
+        android:text="@string/add_location" />
+
+</RelativeLayout>

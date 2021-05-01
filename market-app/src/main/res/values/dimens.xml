@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="mapHeight">190dp</dimen>
+
+    <dimen name="labelMargin">110dp</dimen>
+    <dimen name="globalMargin">24dp</dimen>
+
+    <dimen name="separatorHeight">12sp</dimen>
+
+    <dimen name="bottomBarHeight">58dp</dimen>
+    <dimen name="buttonHeight">46dp</dimen>
+    <dimen name="formItemHeight">58dp</dimen>
+    <dimen name="marginVerySmall">8dp</dimen>
+    <dimen name="marginLessSmall">12dp</dimen>
+    <dimen name="marginSmall">16dp</dimen>
+    <dimen name="marginMedium">18dp</dimen>
+    <dimen name="marginNormal">24dp</dimen>
+    <dimen name="marginBig">32dp</dimen>
+    <dimen name="marginVeryBig">42dp</dimen>
+    <dimen name="titleHeight">48dp</dimen>
+    <dimen name="toolbarElevation">8dp</dimen>
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="cornerRadius">4dp</dimen>
+
+</resources>

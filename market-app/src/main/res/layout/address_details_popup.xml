@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginBig"
+        android:layout_marginEnd="@dimen/marginBig"
+        android:background="@drawable/rounded_corners_grey"
+        android:elevation="8dp"
+        android:minWidth="300dp"
+        android:orientation="vertical"
+        android:padding="@dimen/marginNormal">
+
+        <TextView
+            style="@style/LightLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="@string/area"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/localityField"
+            style="@style/Large"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/rounded_corners_white_10"
+            android:inputType="textCapSentences|textNoSuggestions"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:textColor="@color/editText"
+            android:textColorHint="@color/editTextHint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/marginVerySmall">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/LightLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="@string/building"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/buildingField"
+                    style="@style/Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:paddingLeft="6dp"
+                    android:paddingEnd="6dp"
+                    android:textColor="@color/editText"
+                    android:textColorHint="@color/editTextHint" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/marginVerySmall">
+
+                <TextView
+                    style="@style/LightLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="@string/apt_unit"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/unitField"
+                    style="@style/Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:inputType="textCapSentences|textNoSuggestions"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:textColor="@color/editText"
+                    android:textColorHint="@color/editTextHint" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/LightLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:text="@string/additional_info"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/notesField"
+            style="@style/Large"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/rounded_corners_white_10"
+            android:inputType="textCapSentences|textNoSuggestions"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:textColor="@color/editText"
+            android:textColorHint="@color/editTextHint" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirmButton"
+        style="@style/PrimaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:background="@drawable/rounded_corners_button"
+        android:elevation="4dp"
+        android:minWidth="180dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/submit" />
+
+    <TextView
+        android:id="@+id/cancelButton"
+        style="@style/ButtonFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="60dp"
+        android:gravity="center"
+        android:minWidth="80dp"
+        android:text="@string/cancel"
+        android:textColor="@color/white" />
+
+</LinearLayout>

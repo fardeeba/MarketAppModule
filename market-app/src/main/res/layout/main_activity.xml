@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/homeBackground">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="always"
+        android:paddingTop="52dp"
+        android:paddingBottom="100dp"
+        android:scrollbarSize="4dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:scrollbars="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/headerView"
+        android:clipToPadding="false"
+        android:paddingBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/nonCurvedView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:elevation="@dimen/toolbarElevation"
+            android:background="@drawable/home_page_header_bg"
+             />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:elevation="@dimen/toolbarElevation"
+            android:gravity="center_vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/changeLocationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:maxLines="1"
+                    android:text="@string/delivery_address"
+                    android:textColor="@color/homeHeaderLabelColor"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:paddingEnd="@dimen/marginSmall"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/changeLocationText"
+                    style="@style/BoldFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:maxWidth="300dp"
+                    android:maxLines="1"
+                    android:text="@string/current_location"
+                    android:textColor="@color/homeHeaderTextColor"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:paddingEnd="@dimen/marginSmall"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/changeLocationText"
+                    android:padding="6dp"
+                    android:src="@drawable/arrow_down"
+                    android:tint="@color/homeHeaderTextColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/search_thick"
+                        android:tint="@color/splashBackground"
+                        android:padding="5dp"
+                        android:layout_height="40dp"
+                        android:layout_width="40dp">
+                </ImageView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.skylarksit.module.ui.components.NavigationBar
+        android:id="@+id/navigationBar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.skylarksit.module.ui.components.NavigationBar>
+
+
+</RelativeLayout>

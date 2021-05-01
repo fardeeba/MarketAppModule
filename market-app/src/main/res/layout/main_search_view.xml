@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <RelativeLayout
+        android:id="@+id/searchEditLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:layout_marginBottom="2dp"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/searchProducts"
+            style="@style/Normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:hint="@string/find_shops_or_products"
+            android:inputType="text|textNoSuggestions"
+            android:maxLines="1"
+            android:paddingStart="@dimen/marginVerySmall"
+            android:paddingEnd="@dimen/marginVerySmall" />
+
+        <RelativeLayout
+            android:id="@+id/clearSearch"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:animateLayoutChanges="true">
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/close" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <com.skylarksit.module.ui.components.ProductListView
+        android:id="@+id/promoListView"
+        android:layout_below="@id/searchEditLayout"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.skylarksit.module.ui.components.ProductListView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/promoListView"
+        android:background="@color/background"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/marginNormal"
+        android:paddingEnd="@dimen/marginNormal"
+        android:paddingBottom="@dimen/marginNormal">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/searchImageRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp">
+
+        <RelativeLayout
+            android:id="@+id/magnifier_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_white">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/search_thick"
+                android:tint="@color/primaryColor" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            style="@style/LightLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/magnifier_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/marginBig"
+            android:layout_marginTop="@dimen/marginNormal"
+            android:layout_marginEnd="@dimen/marginBig"
+            android:text="@string/enter_a_few_words_to_start_searching"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

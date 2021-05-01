@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/titleLayout"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:text="@string/my_addresses" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profileList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleLayout"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/marginNormal"
+        android:paddingBottom="80dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/addNewAddress"
+        style="@style/ButtonPrimary"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/marginSmall"
+        android:text="@string/new_address" />
+
+
+</RelativeLayout>
+

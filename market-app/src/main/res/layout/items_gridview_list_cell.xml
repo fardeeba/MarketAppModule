@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:elevation="2dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/marginSmall"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginBottom="@dimen/marginVerySmall"
+            android:layout_marginTop="@dimen/marginLessSmall"
+            android:layout_marginEnd="@dimen/marginVerySmall"
+            android:padding="2dp"
+            fresco:placeholderImage="@drawable/placeholder"
+            fresco:placeholderImageScaleType="centerInside"
+            fresco:actualImageScaleType="centerInside"
+            />
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/watermark"
+            android:layout_alignBottom="@id/image"
+            android:layout_alignEnd="@id/image"
+            android:layout_width="28dp"
+            android:layout_marginEnd="2dp"
+            fresco:actualImageScaleType="fitCenter"
+            android:layout_height="28dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/quickAddText"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:paddingEnd="@dimen/marginVerySmall"
+            android:paddingStart="8dp"
+            android:paddingTop="@dimen/marginLessSmall"
+            android:paddingBottom="@dimen/marginVerySmall"
+            >
+            <TextView
+                android:id="@+id/quickAddLabel"
+                android:layout_height="26dp"
+                android:layout_width="wrap_content"
+                    style="@style/ButtonFont"
+                android:paddingStart="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor"
+                android:paddingEnd="12dp"
+                android:background="@drawable/rounded_corners_button_grey"
+                android:text="@string/add"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image"
+            android:textSize="16sp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginTop="@dimen/marginLessSmall"
+             />
+
+        <!--<TextView
+            android:id="@+id/description"
+            style="@style/Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:paddingTop="4dp"
+            android:text=" "
+            android:layout_toEndOf="@id/image"
+            android:layout_below="@id/label"
+            android:maxLines="4"
+            />-->
+
+        <TextView
+            android:id="@+id/discountText"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginEnd="90dp"
+            android:background="@drawable/rounded_corners_button_discount"
+            android:paddingStart="@dimen/marginVerySmall"
+            android:paddingTop="2dp"
+            android:paddingEnd="@dimen/marginVerySmall"
+            android:paddingBottom="2dp"
+            android:maxLines="1"
+            android:text="-30%"
+            android:layout_below="@id/label"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/discountText"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/marginLessSmall"
+            >
+
+            <TextView
+                android:id="@+id/priceText"
+                style="@style/Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/secondaryTextColor"
+                android:text="66.6$" />
+
+            <TextView
+                android:id="@+id/unitType"
+                style="@style/Normal"
+                android:textColor="@color/secondaryTextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/priceText"
+                android:layout_gravity="center_vertical"
+                android:text="(200g)" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/addRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="@dimen/marginLessSmall"
+            android:paddingEnd="@dimen/marginVerySmall"
+            android:paddingStart="@dimen/marginVerySmall"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/minusImage"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/counter_button_remove_ar"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:src="@drawable/minus"
+                android:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/itemCounterText"
+                style="@style/BoldFont"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:background="@drawable/item_counter_top_ar"
+                android:gravity="center"
+                android:minWidth="26dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="6dp"
+                android:text="12"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/plusImage"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/counter_button_remove"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:src="@drawable/plus"
+                android:tint="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignStart="@id/addRemove"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+            <Button
+                android:id="@+id/minusHitArea"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:background="@color/transparent"
+                android:layout_width="0dip"
+                android:textSize="12sp" />
+            <Button
+                android:id="@+id/plusHitArea"
+                android:background="@color/transparent"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:layout_width="0dip"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <include layout="@layout/comp_line" android:id="@+id/line" android:layout_height="wrap_content" android:layout_width="match_parent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

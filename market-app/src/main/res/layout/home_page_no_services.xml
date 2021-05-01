@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/recyclerView"
+    android:paddingBottom="@dimen/marginBig">
+
+    <!-- Removed by Ronny -->
+    <!--<TextView-->
+        <!--android:id="@+id/noServicesText"-->
+        <!--style="@style/Large"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="@dimen/marginNormal"-->
+        <!--android:layout_marginTop="@dimen/marginBig"-->
+        <!--android:layout_marginEnd="@dimen/marginNormal"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:textSize="16sp" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/defaultLocationsList"
+        android:layout_width="match_parent"
+        android:divider="@color/background"
+        android:isScrollContainer="false"
+        android:clipToPadding="false"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/changeLocationButton"
+        style="@style/ButtonPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/defaultLocationsList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/marginBig"
+        android:layout_marginBottom="@dimen/marginVerySmall"
+        android:text="@string/change_location" />
+
+</RelativeLayout>
+

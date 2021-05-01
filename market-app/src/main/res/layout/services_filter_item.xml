@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingStart="2dp"
+    android:paddingTop="2dp"
+    android:paddingEnd="2dp"
+    android:paddingBottom="2dp">
+
+    <ToggleButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@drawable/subcategories_background"
+        android:elevation="2dp"
+        android:paddingStart="@dimen/marginVerySmall"
+        android:paddingEnd="@dimen/marginVerySmall" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/circle_white"
+        android:layout_centerHorizontal="true"
+        android:clipToPadding="false"
+        android:elevation="2dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:translationZ="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerHorizontal="true"
+        fresco:roundAsCircle="true"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/placeholder"
+        />
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/Normal"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:text="Groceries"
+        />
+
+</RelativeLayout>

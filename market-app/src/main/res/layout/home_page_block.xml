@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false">
+
+    <TextView
+        android:id="@+id/headerText"
+        style="@style/SectionHeaderFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:paddingTop="@dimen/marginMedium"
+        android:layout_marginEnd="14dp" />
+
+
+    <!--<TextView-->
+    <!--android:layout_marginTop="@dimen/marginSmall"-->
+    <!--android:paddingStart="14dp"-->
+    <!--android:paddingRight="14dp"-->
+    <!--android:id="@+id/actionText"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="View Stores"-->
+    <!--android:paddingBottom="6dp"-->
+    <!--android:paddingTop="2dp"-->
+    <!--android:textColor="@color/textButtonColor"-->
+    <!--style="@style/ButtonFont"-->
+    <!--/>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerText"
+        android:clipToPadding="false"
+        android:paddingTop="6dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        />
+
+</RelativeLayout>

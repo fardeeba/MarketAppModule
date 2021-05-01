@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:visibility="gone"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation">
+
+        <RelativeLayout
+            android:id="@+id/titleTextLayout"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleText"
+                style="@style/PageTitleFont"
+                android:layout_centerVertical="true"
+                android:textColor="@color/buttonTextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/titleText"
+                android:padding="6dp"
+                android:src="@drawable/arrow_down"
+                android:tint="@color/buttonTextColor" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_below="@id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </androidx.viewpager.widget.ViewPager>
+
+    <RelativeLayout
+        android:id="@+id/headerView"
+        android:layout_below="@id/titleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <include layout="@layout/provider_header_view" android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <com.skylarksit.module.utils.SlidingTabLayout
+            android:id="@+id/sliding_tabs"
+            android:layout_below="@id/header"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layoutDirection="ltr"
+            android:layout_height="46dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/subcategoriesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sliding_tabs"
+            android:background="@color/white"
+            android:layout_toStartOf="@+id/subcategoriesButton"
+            android:clipToPadding="true"
+            android:paddingStart="10dp"
+            android:layoutDirection="ltr"
+            android:paddingTop="2dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="2dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/subcategoriesButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/subcategoriesList"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12sp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/list"
+                android:tint="@color/primaryColor"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@id/searchLayout"
+        android:layout_width="match_parent"
+        android:elevation="8dp"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+    <com.skylarksit.module.ui.components.NavigationBar
+        android:layout_alignParentBottom="true"
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.skylarksit.module.ui.components.NavigationBar>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/bottomBar"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_margin="@dimen/marginSmall"-->
+        <!--android:elevation="8dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:background="@drawable/rounded_corners_button_dark">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/basket"-->
+            <!--android:layout_width="26dp"-->
+            <!--android:layout_height="26dp"-->
+            <!--android:layout_marginStart="@dimen/marginSmall"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/cart_icon_white"-->
+            <!--android:tint="@color/buttonTextColor"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:layout_toEndOf="@id/basket"-->
+            <!--android:id="@+id/totalText"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginStart="@dimen/marginVerySmall"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:text="@string/view_basket"-->
+            <!--android:textSize="15sp"-->
+            <!--style="@style/DarkButtonFont"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/totalItems"-->
+            <!--style="@style/BoldFont"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingTop="4dp"-->
+            <!--android:paddingBottom="4dp"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginEnd="10dp"-->
+            <!--android:background="@drawable/circle_white"-->
+            <!--android:paddingStart="4dp"-->
+            <!--android:paddingEnd="4dp"-->
+            <!--android:includeFontPadding="false"-->
+            <!--android:gravity="center"-->
+            <!--android:maxLines="1"-->
+            <!--android:minWidth="26dp"-->
+            <!--android:textColor="@color/redColor"-->
+            <!--android:textSize="13sp" />-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/searchButton"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:background="@drawable/circle_white"-->
+        <!--android:elevation="@dimen/toolbarElevation"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:layout_marginEnd="@dimen/marginSmall"-->
+        <!--android:layout_marginBottom="@dimen/marginSmall"-->
+        <!--android:padding="17dp"-->
+        <!--android:src="@drawable/search_thick"-->
+        <!--android:tint="@color/primaryColor"-->
+        <!--/>-->
+
+
+    <!--<RelativeLayout-->
+            <!--android:id="@+id/homeIcon"-->
+            <!--android:background="@color/white"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_marginTop="@dimen/marginVerySmall"-->
+            <!--android:elevation="@dimen/toolbarElevation"-->
+            <!--android:layout_height="@dimen/bottomBarHeight">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:padding="4dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:src="@drawable/home_icon"-->
+                <!--android:tint="@color/buttonColor"-->
+                <!--/>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:background="@drawable/bottom_bar_view_basket"-->
+            <!--android:layout_marginTop="@dimen/marginVerySmall"-->
+            <!--android:layout_toEndOf="@id/homeIcon"-->
+            <!--android:id="@+id/nextButton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/bottomBarHeight"-->
+            <!--android:paddingEnd="6dp"-->
+            <!--android:paddingStart="6dp"-->
+            <!--android:elevation="@dimen/toolbarElevation"-->
+            <!--&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:padding="4dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_marginStart="4dp"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/totalItems"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="5 Items"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--style="@style/BoldFont"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/totalPrice"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="5000 LBP"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--style="@style/BoldFont"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/totalText"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:text="VIEW BASKET"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@color/white"-->
+                <!--style="@style/BoldFont"-->
+                <!--android:layout_toStartOf="@id/arrowRight"-->
+                <!--/>-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/arrowRight"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="4dp"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:padding="6dp"-->
+                <!--android:layout_gravity="center_vertical"-->
+
+                <!--android:src="@drawable/arrow_right"-->
+                <!--android:tint="@color/buttonTextColor"-->
+                <!--/>-->
+
+
+        <!--</RelativeLayout>-->
+
+</RelativeLayout>

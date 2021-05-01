@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/marginSmall">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/SectionHeaderFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:layout_marginBottom="6dp"
+        android:text="@string/recommeded_for_you" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        style="@style/BoldFont"
+        android:textSize="15sp"
+        android:paddingTop="2dp"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/marginSmall"
+        android:paddingEnd="@dimen/marginSmall"
+        android:layout_toEndOf="@id/title"
+        android:text=""
+        android:textColor="@color/textButtonColor"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:clipToPadding="false"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="4dp"
+        android:scrollbarSize="2dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbHorizontal="@color/darker_gray"
+        android:scrollbars="horizontal" />
+
+</RelativeLayout>

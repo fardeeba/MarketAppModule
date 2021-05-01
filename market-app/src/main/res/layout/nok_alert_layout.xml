@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginBig"
+        android:layout_marginEnd="@dimen/marginBig"
+        android:background="@drawable/rounded_corners_white_10"
+        android:elevation="8dp"
+        android:minWidth="300dp"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="@dimen/marginNormal"
+        android:paddingRight="@dimen/marginNormal"
+        android:paddingTop="20dp"
+        android:paddingBottom="@dimen/marginNormal">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            style="@style/BoldFont"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/dialog_message"
+            style="@style/Normal"
+            android:layout_below="@id/dialog_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginSmall"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/confirmButton"
+        style="@style/PrimaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:background="@drawable/rounded_corners_button"
+        android:elevation="4dp"
+        android:minWidth="180dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/confirm" />
+
+    <TextView
+        android:id="@+id/cancelButton"
+        style="@style/ButtonFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="60dp"
+        android:gravity="center"
+        android:minWidth="80dp"
+        android:text="@string/cancel"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

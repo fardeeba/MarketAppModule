@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:background="@drawable/rounded_corners_white_10"
+    android:elevation="@dimen/elevation"
+    android:layout_margin="4dp"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:roundedCornerRadius="@dimen/cornerRadius"
+        fresco:placeholderImage="@color/background"
+        fresco:overlayImage="@drawable/home_item_bg" />
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/BoldFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/BoldFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label"
+        android:alpha="0.92"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/black"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="This is a description"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+
+    <!--<RelativeLayout-->
+    <!--android:elevation="3dp"-->
+    <!--android:id="@+id/textLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/label"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="This is a text"-->
+    <!--style="@style/BoldFont"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="20sp"-->
+    <!--android:shadowDy="1"-->
+    <!--android:shadowColor="@color/black"-->
+    <!--android:shadowRadius="2"-->
+    <!--android:shadowDx="0"-->
+    <!--android:gravity="center"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:visibility="gone"-->
+    <!--android:id="@+id/description"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="This is a description"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:alpha="0.92"-->
+    <!--style="@style/BoldFont"-->
+    <!--android:shadowDy="1"-->
+    <!--android:shadowColor="@color/black"-->
+    <!--android:shadowRadius="2"-->
+    <!--android:textSize="15sp"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:layout_below="@id/label"-->
+    <!--/>-->
+
+    <!--</RelativeLayout>-->
+
+
+</RelativeLayout>

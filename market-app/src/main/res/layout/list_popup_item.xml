@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_white_10"
+        android:elevation="1dp"
+        android:focusable="false"
+        android:minHeight="60dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:scaleType="centerInside"
+            android:padding="4dp"
+            android:tint="@color/secondaryColor"
+            />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            fresco:placeholderImage="@drawable/placeholder" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="60dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/marginSmall"
+                    android:fadingEdge="horizontal"
+                    android:textSize="16sp"
+                    android:maxLines="2"
+                    android:text="@string/home" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    style="@style/Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_alignStart="@id/title"
+                    android:layout_marginEnd="@dimen/marginSmall"
+                    android:fadingEdge="horizontal"
+                    android:maxLines="1"
+                    android:text="LHL-IJT" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/line"
+            layout="@layout/comp_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

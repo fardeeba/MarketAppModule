@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="editText">#5A6469</color>
+    <color name="editTextHint">#BABABA</color>
+
+    <color name="redColor">#ED7267</color>
+    <color name="discountColor">#f1c40f</color>
+    <color name="textColor">#434143</color>
+    <!-- Theme Colors -->
+
+    <color name="splashBackground">#FFF200</color>
+
+    <color name="headerColorDark">#624D98</color>
+    <color name="headerColorLight">#826fb1</color>
+
+    <color name="headerTextColor">#FFFFFF</color>
+    <color name="homeHeaderTextColor">#FFFFFF</color>
+    <color name="homeHeaderSecondaryTextColor">#FFFFFF</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+
+    <color name="headerIconsColor">#FFFFFF</color>
+
+    <color name="tooltipsBackground">#BC8BDD</color>
+
+    <color name="sectionHeaderTextColor">#434143</color>
+
+    <color name="primaryColor">#624D98</color>
+    <color name="windowBackground">#624D98</color>
+    <color name="primaryTextColor">#624D98</color>
+    <color name="secondaryTextColor">#d6adf1</color>
+    <color name="thirdTextColor">#d6adf1</color>
+    <color name="buttonColor">#624D98</color>
+    <color name="buttonColorLight">#AB6DD4</color>
+    <color name="secondaryColor">#BC8BDD</color>
+    <color name="slidingTabBar">#BC8BDD</color>
+    <color name="textButtonColor">#624D98</color>
+    <color name="homeHeaderLabelColor">#FEA668</color>
+
+
+    <color name="checkoutColorLight">#FEA668</color>
+    <color name="checkoutColorDark">#FB5373</color>
+
+    <color name="categoriesSelectedColor">#282850</color>
+    <color name="addRemoveButtonColor">#d8d8d8</color>
+
+    <color name="homePageTransparency">#705A6469</color>
+    <bool name="homePageAlignCenter">false</bool>
+
+    <color name="homePageHeaderColorLight">#FEA668</color>
+    <color name="homePageHeaderColorDark">#FB5373</color>
+
+    <!-- End Theme Colors -->
+    <color name="darker_gray">#d8d8d8</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="transparentDark">#bb333333</color>
+    <color name="statusBarTransparent">#20000000</color>
+
+    <color name="background">#F2F1F6</color>
+    <color name="addButtonBackground">#EEEEF1</color>
+    <color name="addButtonColor">#E3E3E4</color>
+    <color name="light_black">#505050</color>
+    <color name="black">#303030</color>
+
+    <color name="color_light_grey">#a0a0a0</color>
+    <color name="color_light_grey_less">#d0c0c0</color>
+    <color name="add_item_color">#D8C8C8</color>
+    <color name="add_item_color_sold_out">#EEEEF1</color>
+
+    <color name="white">#ffffff</color>
+    <color name="homeBackground">#FFFFFF</color>
+
+    <color name="subcategoriesSelectedColor">#434143</color>
+
+    <dimen name="subcategoriesRadius">3dp</dimen>
+    <dimen name="homePageCorners">2dp</dimen>
+    <dimen name="gridItemsCorners">2dp</dimen>
+    <bool name="hasBackgroundImage">false</bool>
+    <bool name="showItemBox">true</bool>
+    <bool name="homePageCallSupport">false</bool>
+    <bool name="applyColorFilter">true</bool>
+    <bool name="categoriesHaveImages">false</bool>
+    <bool name="showCategories">true</bool>
+    <bool name="singleStore">false</bool>
+    <bool name="homePageStatusBarLight">false</bool>
+    <bool name="hasProductSuggestion">false</bool>
+
+    <color name="favoriteFillColor">#624D98</color>
+
+    <color name="navigationBarBasket">#FEA668</color>
+    <color name="navigationBarDark">#FFFFFF</color>
+    <color name="navigationBarLight">#FFFFFF</color>
+    <color name="navigationBarIconColor">#F2F1F6</color>
+
+</resources>

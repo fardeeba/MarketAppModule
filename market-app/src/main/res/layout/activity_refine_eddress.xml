@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.main.RefineEddressActivity"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:text="@string/address_details" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/titleLabel"
+        android:layout_marginStart="@dimen/marginNormal"
+        android:layout_marginEnd="@dimen/marginNormal"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/rounded_corners_white_10_top"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:duplicateParentState="true"
+                    android:text="@string/hint_area"
+                    style="@style/Label"/>
+
+                <EditText
+                    android:id="@+id/nameField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:layout_marginEnd="@dimen/marginSmall"
+                    android:background="@android:color/white"
+                    android:lines="1"
+                    android:focusable="false"
+                    android:hint="@string/choose_a_name_for_your_address"
+                    android:maxLines="1"
+                    android:textColor="@color/editText"
+                    android:inputType="textCapSentences"
+                    android:textColorHint="@color/editTextHint"
+                    style="@style/Normal"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_height="@dimen/formItemHeight"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/area"
+                    style="@style/Label"
+                    />
+
+                <EditText
+                    android:id="@+id/areaField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:layout_marginEnd="15dp"
+                    android:background="@android:color/white"
+                    android:hint="@string/hint_area"
+                    android:maxLines="1"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/editText"
+                    android:textColorHint="@color/editTextHint"
+                    style="@style/Normal"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:background="@android:color/white">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/building"
+                    style="@style/Label"
+                    />
+
+                <EditText
+                    android:id="@+id/buildingField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:layout_marginEnd="15dp"
+                    android:background="@android:color/white"
+                    android:hint="@string/hint_building"
+                    android:maxLines="1"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/editText"
+                    android:textColorHint="@color/editTextHint"
+                    style="@style/Normal"
+                    />
+
+                <include layout="@layout/comp_line"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/comp_line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/apt_unit"
+                    android:inputType="textCapSentences"
+                    style="@style/Label"
+                    />
+
+                <EditText
+                    android:id="@+id/aptField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@android:color/white"
+                    android:hint="@string/hint_app_unit"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:textColor="@color/editText"
+                    android:inputType="textCapSentences"
+                    style="@style/Normal"
+                    />
+
+                <!--<LinearLayout android:layout_width="match_parent"-->
+                              <!--android:layout_height="match_parent"-->
+                                <!--android:weightSum="2"-->
+                              <!--android:orientation="horizontal"-->
+                              <!--android:layout_marginLeft="@dimen/eddressDetailMarginLeft"-->
+                <!--&gt;-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/floorField"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@android:color/white"-->
+                        <!--android:hint="Floor"-->
+                        <!--android:imeOptions="actionDone"-->
+                        <!--android:maxLines="1"-->
+                        <!--android:textColor="@color/editText"-->
+                        <!--style="@style/Normal"-->
+                    <!--/>-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/aptField"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginEnd="15dp"-->
+                        <!--android:background="@android:color/white"-->
+                        <!--android:hint="3rd floor left"-->
+                        <!--android:imeOptions="actionDone"-->
+                        <!--android:maxLines="1"-->
+                        <!--android:textColor="@color/editText"-->
+                        <!--style="@style/Normal"-->
+                    <!--/>-->
+
+                <!--</LinearLayout>-->
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:background="@drawable/rounded_corners_white_10_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/more_info"
+                    style="@style/Label"/>
+
+                <EditText
+                    android:id="@+id/moreInfoField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:layout_marginEnd="15dp"
+                    android:background="@android:color/white"
+                    android:hint="@string/hint_more_info"
+                    android:maxLines="1"
+                    android:textColor="@color/editText"
+                    android:textColorHint="@color/editTextHint"
+                    style="@style/Normal"
+                    />
+
+                <include layout="@layout/comp_line"/>
+
+            </RelativeLayout>
+            <include layout="@layout/comp_separator"/>
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/privacyLayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/formItemHeight"-->
+                <!--android:background="@android:color/white">-->
+                <!--<include layout="@layout/comp_line"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginStart="@dimen/globalMargin"-->
+                    <!--android:layout_marginEnd="@dimen/globalMargin"-->
+                    <!--android:text="Privacy"-->
+                    <!--style="@style/Label"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/privacyField"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginStart="@dimen/eddressDetailMarginStart"-->
+                    <!--android:text="My contacts"-->
+                    <!--style="@style/Normal"-->
+                    <!--/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/marketplaceBox"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/formItemHeight"-->
+                <!--android:background="@android:color/white">-->
+
+                <!--<include layout="@layout/comp_line"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:text="Show in marketplace"-->
+                    <!--android:layout_marginStart="@dimen/globalMargin"-->
+                    <!--style="@style/Label"-->
+                    <!--/>-->
+
+                <!--<Switch-->
+                    <!--android:id="@+id/marketplace"-->
+                    <!--android:layout_width="90dp"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginEnd="@dimen/globalMargin" />-->
+            <!--</RelativeLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/createEddressButton"
+        style="@style/PrimaryButton"
+        android:layout_marginBottom="20dp"
+        android:elevation="1dp"
+        android:minWidth="160dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corners_button"
+        android:layout_width="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/confirm" />
+
+
+
+
+</RelativeLayout>

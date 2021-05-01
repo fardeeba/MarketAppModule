@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.activities.settings.SettingsActivity">
+
+
+    <TextView
+        android:id="@+id/titleSettings"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:text="@string/settings" />
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleSettings"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/marginNormal"
+        android:paddingTop="@dimen/marginNormal"
+        android:paddingEnd="@dimen/marginNormal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/formItemHeight"-->
+            <!--android:layout_marginStart="20dp">-->
+
+            <!--<com.facebook.drawee.view.SimpleDraweeView-->
+            <!--android:id="@+id/profilePicture"-->
+            <!--android:layout_width="35dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:clickable="false"-->
+            <!--android:enabled="false"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--fresco:placeholderImage="@drawable/placeholder"-->
+            <!--fresco:roundAsCircle="true"/>-->
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/changePictureCell"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/formItemHeight"-->
+            <!--android:layout_marginStart="40dp"-->
+            <!--android:layout_toEndOf="@+id/profilePicture"-->
+            <!--android:layout_toEndOf="@+id/profilePicture">-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/changePictureLabel"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:paddingStart="40dp"-->
+            <!--android:clickable="false"-->
+            <!--style="@style/ButtonFont"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="REMOVE PICTURE" />-->
+            <!--</RelativeLayout>-->
+            <!--</RelativeLayout>-->
+            <!--<include layout="@layout/comp_line"/>-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/rounded_corners_white_10_top">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/full_name" />
+
+                <EditText
+                    android:id="@+id/nameField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="start"
+                    android:background="@android:color/white"
+                    android:hint="@string/enter_your_full_name"
+                    android:maxLines="1"
+                    android:textColorHint="@color/editTextHint" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/gender" />
+
+                <TextView
+                    android:id="@+id/genderField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@android:color/white"
+                    android:hint="@string/male_female"
+                    android:maxLines="1"
+                    android:gravity="start"
+                    android:layout_marginEnd="10dp"
+                    android:textColorHint="@color/editTextHint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/birthday" />
+
+                <TextView
+                    android:id="@+id/birthdateField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@android:color/white"
+                    android:hint="DD / MM / YYYY"
+                    android:maxLines="1"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="start"
+                    android:textColorHint="@color/editTextHint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/rounded_corners_white_10_bottom">
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/globalMargin"
+                    android:layout_marginEnd="@dimen/globalMargin"
+                    android:text="@string/email" />
+
+                <EditText
+                    android:id="@+id/emailField"
+                    style="@style/Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/labelMargin"
+                    android:background="@android:color/white"
+                    android:hint="your@email.com"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="start"
+                    android:textColorHint="@color/editTextHint" />
+
+            </RelativeLayout>
+
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/ordersCell"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/formItemHeight"-->
+            <!--android:layout_marginTop="@dimen/marginNormal"-->
+            <!--android:background="@drawable/rounded_corners_white_10"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+            <!--style="@style/ButtonFont"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginStart="@dimen/marginSmall"-->
+            <!--android:text="Previous Orders"-->
+            <!--/>-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@color/background"/>-->
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/feedbackCell"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:background="@drawable/rounded_corners_white_10_top">
+
+                <TextView
+                    style="@style/ButtonFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/marginSmall"
+                    android:text="@string/send_feedback" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/background" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/shareCell"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/ButtonFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/marginSmall"
+                    android:text="@string/share_the_app" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/background" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/faqCell"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/ButtonFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/marginSmall"
+                    android:text="@string/faq" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/background" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/privacyCell"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:background="@drawable/rounded_corners_white_10_bottom">
+
+                <TextView
+                    style="@style/ButtonFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/marginSmall"
+                    android:text="@string/privacy_and_terms" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/referralAppCell"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:visibility="visible"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/ButtonFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/marginSmall"
+                    android:text="Share with friend" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/background" />
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/comp_separator" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:background="@drawable/rounded_corners_white_10"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/ButtonFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/change_phone_number" />
+            </RelativeLayout>
+
+            <include layout="@layout/comp_separator" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/buttonHeight"
+                android:background="@drawable/rounded_corners_white_10"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/ButtonFontRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/deactivate_account" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView-->
+    <!--android:id="@+id/expanded_image"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@android:color/black"-->
+    <!--android:scaleType="fitCenter"-->
+    <!--android:visibility="invisible" />-->
+    <!--</FrameLayout>-->
+</RelativeLayout>

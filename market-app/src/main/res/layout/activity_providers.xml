@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:text="@string/order_details" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:clipToPadding="false"
+        android:listSelector="@android:color/transparent"
+        android:paddingStart="@dimen/marginSmall"
+        android:layout_above="@+id/navigationBar"
+        android:paddingTop="@dimen/marginSmall"
+        android:paddingEnd="@dimen/marginSmall"
+        android:paddingBottom="70dp"/>
+
+    <RelativeLayout
+        android:id="@id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="20dp"
+        android:visibility="gone" />
+
+    <com.skylarksit.module.ui.components.NavigationBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

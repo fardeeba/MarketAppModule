@@ -1,0 +1,29 @@
+<resources translatable="false">
+
+    <string name="app_name" translatable="false">appName</string>
+    <string name="application" translatable="false">appName</string>
+    <string name="uriScheme" translatable="false">urischeme</string>
+    <string name="appType" translatable="false">Marketplace</string>
+    <string name="branch_key_prod" translatable="false">key_live_123</string>
+    <string name="branch_key_test" translatable="false">key_test_123</string>
+    <string name="support_email" translatable="false">info@eddress.co</string>
+    <string name="branch_link" translatable="false">martcart.app.link</string>
+    <string name="serverUrl" translatable="false">serverUrl</string>
+    <string name="serverUrlDebug" translatable="false">serverUrl</string>
+    <string name="segment_key" translatable="false"/>
+    <string name="geo_api_key" translatable="false">AIzaSyDqeh7zJAWTfJC_ExxUI9IWNGC-ImkD6g8</string>
+    <string name="facebook_app_id" translatable="false">facebookid</string>
+    <string name="fb_login_protocol_scheme" translatable="false"/>
+    <string name="paymentGateway" translatable="false"/>
+    <bool name="showFullWidthStores">false</bool>
+    <bool name="showFullWidthItem">false</bool>
+
+    <declare-styleable name="ProductListView">
+        <attr name="layoutType" format="enum">
+            <enum name="grid" value="1"/>
+            <enum name="vertical" value="2"/>
+            <enum name="horizontal" value="3"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

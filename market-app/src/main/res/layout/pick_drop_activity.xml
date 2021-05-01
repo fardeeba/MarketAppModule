@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.activities.hyperlocal.PickDropActivity">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/PageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleHeight"
+        android:background="@drawable/gradient_background"
+        android:elevation="@dimen/toolbarElevation"
+        android:text="@string/pick_and_drop" />
+
+    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/mapParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="18dp">
+
+                <RelativeLayout
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <fragment
+                        android:id="@+id/eddressMap"
+                        android:name="com.google.android.gms.maps.MapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mapHeight"
+                        map:cameraZoom="10" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/headerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mapHeight"/>
+
+                <RelativeLayout
+                    android:id="@+id/etaLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/rounded_corners_button_white"
+                    android:elevation="4dp"
+                    android:padding="@dimen/marginVerySmall"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/eta"
+                        style="@style/Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/distance" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/eta"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp">
+
+                        <TextView
+                            android:id="@+id/etaLabel"
+                            style="@style/ButtonFont"
+                            android:layout_width="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/etaTime"
+                            style="@style/ButtonFont"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/marginVerySmall"
+                            android:layout_toEndOf="@id/etaLabel"
+                            android:textColor="@color/color_light_grey" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pickupDetails"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_below="@id/mapParent"
+                android:layout_marginStart="@dimen/marginSmall"
+                android:layout_marginEnd="@dimen/marginSmall"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/rounded_corners_white_10_top"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/pickupPin"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/pin_purple"
+                    android:tint="@color/primaryColor" />
+
+                <TextView
+                    android:id="@+id/pickupLocation"
+                    style="@style/LightLarge"
+                    android:layout_width="match_parent"
+
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingStart="42dp"
+                    android:text="@string/select_pick_up_location" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/deliveryDetails"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_below="@id/pickupDetails"
+                android:layout_marginStart="@dimen/marginSmall"
+                android:layout_marginEnd="@dimen/marginSmall"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_10_bottom"
+                android:elevation="2dp">
+
+
+                <ImageView
+                    android:id="@+id/dropOffPin"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/pin_purple"
+                    android:tint="@color/secondaryColor" />
+
+                <TextView
+                    android:id="@+id/deliveryLocation"
+                    style="@style/LightLarge"
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingStart="42dp"
+                    android:text="@string/select_drop_off_location" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tripTypeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/formItemHeight"
+                android:layout_below="@id/deliveryDetails"
+                android:layout_marginStart="@dimen/marginSmall"
+                android:layout_marginTop="@dimen/marginSmall"
+                android:layout_marginEnd="@dimen/marginSmall"
+                android:background="@drawable/rounded_corners_white_10"
+                android:elevation="2dp"
+                android:paddingStart="@dimen/marginSmall"
+                android:paddingEnd="@dimen/marginSmall"
+                android:visibility="gone">
+
+                <Switch
+                    android:id="@+id/tripType"
+                    style="@style/Large"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/round_trip" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dynamicDeliveryChargeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tripTypeLayout"
+                android:layout_marginStart="@dimen/marginSmall"
+                android:layout_marginTop="@dimen/marginSmall"
+                android:layout_marginEnd="@dimen/marginSmall"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/handlingFeeLabel"
+                    style="@style/SectionHeaderFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginVerySmall"
+                    android:text="@string/delivery_fee" />
+
+                <TextView
+                    android:id="@+id/priceText"
+                    style="@style/ButtonFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="@dimen/marginVerySmall"
+                    android:text="@string/view_pricing"
+                    android:textColor="@color/textButtonColor" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/formItemHeight"
+                    android:layout_below="@id/handlingFeeLabel"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:paddingEnd="@dimen/marginSmall">
+
+                    <TextView
+                        android:id="@+id/deliveryChargePrice"
+                        style="@style/Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/surgePrice"
+                        style="@style/ButtonFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="SURGE 1.5x"
+                        android:textColor="@color/redColor"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/noteDetails"-->
+            <!--android:layout_marginTop="@dimen/marginSmall"-->
+            <!--android:layout_marginStart="@dimen/marginSmall"-->
+            <!--android:layout_marginEnd="@dimen/marginSmall"-->
+            <!--android:layout_below="@id/dynamicDeliveryChargeLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/rounded_corners_white_10"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/note"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:gravity="top|start"-->
+            <!--style="@style/Large"-->
+            <!--android:minLines="2"-->
+            <!--android:maxLines="6"-->
+
+            <!--android:inputType="textCapSentences|textMultiLine|textNoSuggestions"-->
+            <!--/>-->
+
+            <!--</RelativeLayout>-->
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/titleHeight">
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/close"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/marginSmall"
+        android:background="@drawable/rounded_corners_button"
+        android:elevation="4dp"
+        android:gravity="center_horizontal"
+        android:minWidth="130dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="30dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="4dp"
+            android:src="@drawable/cart_icon_white"
+            android:tint="@color/buttonTextColor" />
+
+        <TextView
+            style="@style/DarkButtonFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:minWidth="20dp"
+            android:text="@string/checkout"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

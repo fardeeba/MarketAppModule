@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners_white_10"
+    android:orientation="vertical"
+    android:padding="@dimen/marginNormal">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/BoldFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginVerySmall"
+        android:text="Testing something important"
+        android:textSize="18sp" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        fresco:placeholderImage="@drawable/placeholder_wide"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:roundedCornerRadius="@dimen/cornerRadius" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:id="@+id/etaImage"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/time_left" />
+
+        <TextView
+            android:id="@+id/openingHours"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@id/etaImage"
+            android:text="@string/mon_to_friday"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Testing something important"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/specialNotes"
+        style="@style/Warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/special_note"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

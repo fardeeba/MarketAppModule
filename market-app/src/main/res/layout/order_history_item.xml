@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_white_10"
+        android:elevation="2dp"
+        android:focusable="false"
+        android:minHeight="78dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_toStartOf="@id/deliveryTimeLayout"
+            android:layout_height="78dp"
+            android:layout_marginStart="@dimen/marginSmall"
+            android:layout_marginEnd="@dimen/marginVerySmall"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/BoldFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true"
+                    android:fadingEdge="horizontal"
+                    android:maxLines="2"
+                    android:gravity="start"
+                    android:text="@string/home" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    style="@style/Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:fadingEdge="horizontal"
+                    android:maxLines="1"
+                    android:gravity="start"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/marginSmall"
+                    android:text="LHL-IJT"
+                    android:textSize="16sp"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginEnd="@dimen/marginSmall"
+            android:id="@+id/deliveryTimeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            >
+
+            <TextView
+                android:id="@+id/deliveryTimeLabel"
+                style="@style/Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                android:text="@string/delivered"
+                android:textColor="@color/color_light_grey"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/deliveryTimeText"
+                style="@style/BoldFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deliveryTimeLabel"
+                android:maxWidth="300dp"
+                android:maxLines="1"
+                android:text="-"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/line"
+            layout="@layout/comp_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

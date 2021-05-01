@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        style="@style/Normal"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="70dp"
+        android:buttonTint="@color/buttonColor"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="This is a test item" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        style="@style/Normal"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="70dp"
+        android:buttonTint="@color/buttonColor"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="This is a test item"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="500 USD"
+        android:textColor="@color/secondaryTextColor" />
+
+    <include
+        android:id="@+id/line"
+        layout="@layout/comp_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

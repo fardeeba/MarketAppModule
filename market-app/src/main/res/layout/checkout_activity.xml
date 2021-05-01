@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/background">
+
+    <!--<TextView-->
+        <!--android:id="@+id/titleSettings"-->
+        <!--style="@style/PageTitleBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/titleHeight"-->
+        <!--android:background="@drawable/gradient_background"-->
+        <!--android:elevation="@dimen/toolbarElevation"-->
+        <!--android:text="@string/checkout" />-->
+
+
+    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@id/bottomBar"
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"
+        android:layout_margin="@dimen/marginSmall"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:id="@+id/deliveryScheduleLayout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/marginSmall"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/deliveryScheduleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_schedule"
+                    android:layout_marginBottom="@dimen/marginVerySmall"
+                    style="@style/SectionHeaderFont"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/deliverySchedule"
+                    android:layout_below="@id/deliveryScheduleTitle"
+                    android:layout_width="match_parent"
+                    android:elevation="1dp"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_height="@dimen/formItemHeight"
+                    >
+
+                    <ImageView
+                        android:id="@+id/timeImage"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/primaryColor"
+                        android:src="@drawable/time" />
+
+                    <TextView
+                        android:id="@+id/deliveryTimeText"
+                        android:layout_width="match_parent"
+                        style="@style/Large"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="42dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/when" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@id/deliveryScheduleLayout"
+                android:id="@+id/checkoutNotesLayout"
+                android:layout_marginTop="@dimen/marginSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/checkoutNotesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/special_note"
+                    android:layout_marginBottom="@dimen/marginVerySmall"
+                    style="@style/SectionHeaderFont"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/checkoutNotesDetail"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:elevation="1dp"
+                    android:layout_below="@id/checkoutNotesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/checkoutNotes"
+                        android:layout_width="match_parent"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="top|start"
+                        style="@style/Large"
+                        android:minLines="2"
+                        android:maxLines="6"
+                        android:inputType="textCapSentences|textMultiLine|textNoSuggestions"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_marginTop="@dimen/marginSmall"-->
+                <!--android:id="@+id/paymentMethod"-->
+                <!--android:layout_below="@id/checkoutNotesDetail"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:elevation="1dp"-->
+                <!--android:background="@drawable/rounded_corners_white_10"-->
+                <!--android:layout_marginStart="1dp"-->
+                <!--android:layout_marginEnd="1dp"-->
+                <!--android:layout_marginBottom="2dp"-->
+                <!--android:layout_height="@dimen/formItemHeight"-->
+                <!--&gt;-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/paymentImage"-->
+                    <!--android:layout_width="18dp"-->
+                    <!--android:layout_height="18dp"-->
+                    <!--android:layout_marginStart="16dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:tint="@color/primaryColor"-->
+                    <!--android:src="@drawable/creditcard" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/paymentText"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--style="@style/LightLarge"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:paddingStart="42dp"-->
+                    <!--android:paddingEnd="10dp"-->
+                    <!--android:text="@string/select_a_payment_method" />-->
+
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/tipsLayout"
+                android:layout_marginTop="@dimen/marginSmall"
+                android:layout_below="@id/checkoutNotesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/headerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tip_the_driver"
+                    android:layout_marginBottom="@dimen/marginVerySmall"
+                    style="@style/SectionHeaderFont"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tipOptionsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headerText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/summaryLayout"
+                android:layout_marginTop="@dimen/marginSmall"
+                android:layout_below="@id/tipsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/summaryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_summary"
+                    android:layout_marginBottom="@dimen/marginVerySmall"
+                    style="@style/SectionHeaderFont"
+                    />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewBasket"
+                    android:layout_below="@id/summaryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/promoCodeButton"
+                style="@style/ButtonFont"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/titleHeight"
+                android:layout_centerHorizontal="true"
+                android:text="@string/add_promo_code"
+                android:layout_below="@id/summaryLayout"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/marginMedium"
+                android:paddingBottom="@dimen/marginNormal"
+                android:textColor="@color/textButtonColor"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_above="@id/confirmButton"
+        >
+
+        <RelativeLayout
+            android:layout_weight="0.55"
+            android:id="@+id/addressBar"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:elevation="2dp"
+            android:paddingStart="@dimen/marginSmall"
+            android:paddingEnd="@dimen/marginVerySmall"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+            android:layout_width="0dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:paddingTop="2dp"
+                style="@style/Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/delivering_to"
+                android:textColor="@color/color_light_grey"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/pinIcon"
+                android:layout_below="@id/title"
+                android:layout_width="12dp"
+                android:layout_marginTop="3dp"
+                android:layout_height="12dp"
+                android:tint="@color/secondaryColor"
+                android:layout_alignBottom="@id/addressBarText"
+                android:src="@drawable/pin_pickup"
+                />
+
+            <TextView
+                android:layout_toEndOf="@id/pinIcon"
+                android:layout_below="@id/title"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginStart="4dp"
+                style="@style/BoldFont"
+                android:maxLines="1"
+                android:layout_marginTop="1dp"
+                android:id="@+id/addressBarText"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/deliveryAddressIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="6dp"
+                android:src="@drawable/arrow_down"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/paymentBar"
+            android:paddingTop="6dp"
+            android:layout_marginStart="1dp"
+            android:elevation="2dp"
+            android:paddingBottom="6dp"
+            android:paddingStart="@dimen/marginSmall"
+            android:paddingEnd="@dimen/marginVerySmall"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="0.45"
+            android:layout_height="52dp">
+
+            <TextView
+                android:id="@+id/paymentTitle"
+                android:paddingTop="2dp"
+                style="@style/Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                android:text="@string/payment"
+                android:textColor="@color/color_light_grey"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/paymentImage"
+                android:layout_below="@id/paymentTitle"
+                android:layout_alignBottom="@id/paymentText"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="2dp"
+                android:tint="@color/secondaryColor"
+                android:src="@drawable/payments"
+                />
+
+            <TextView
+                android:layout_below="@id/paymentTitle"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@id/paymentImage"
+                android:layout_marginStart="4dp"
+                style="@style/BoldFont"
+                android:maxLines="1"
+                android:layout_marginTop="2dp"
+                android:id="@+id/paymentText"
+                android:textSize="14sp"
+                android:text="Credit Card"
+                />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="6dp"
+                android:src="@drawable/arrow_down"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirmButton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottomBarHeight"
+        >
+
+        <RelativeLayout
+            android:background="@drawable/checkout_bar_bg"
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:elevation="6dp"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/totalItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 Items"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    style="@style/BoldFont"
+                    />
+
+                <TextView
+                    android:id="@+id/totalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5000 LBP"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    style="@style/Normal"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/totalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="PLACE ORDER"
+                android:textSize="15sp"
+                android:paddingEnd="4dp"
+                android:textColor="@color/white"
+                style="@style/BoldFont"
+                android:layout_toStartOf="@id/arrowRight"
+                />
+
+            <ImageView
+                android:id="@+id/arrowRight"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="6dp"
+                android:layout_gravity="center_vertical"
+
+                android:src="@drawable/arrow_right"
+                android:tint="@color/buttonTextColor"
+                />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/formItemHeight"
+        android:background="@color/white"
+        android:paddingStart="@dimen/marginSmall"
+        android:paddingEnd="@dimen/marginSmall">
+
+        <TextView
+            android:id="@+id/priceText"
+            style="@style/Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:tag="field"
+            android:text="6$" />
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxLines="2"
+            android:tag="label"
+            android:text="Peps 1l" />
+
+        <include
+            android:id="@+id/line"
+            layout="@layout/comp_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

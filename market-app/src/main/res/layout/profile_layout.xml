@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                tools:context=".ui.activities.main.ProfileActivity">
+
+    <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleHeight"
+            android:background="@drawable/gradient_background"
+            android:elevation="@dimen/toolbarElevation">
+
+        <TextView
+                android:id="@+id/titleText"
+                style="@style/PageTitleFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_my_profile"/>
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_below="@id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/marginLessSmall"
+                android:paddingStart="@dimen/marginBig"
+                android:paddingEnd="@dimen/marginBig">
+
+            <RelativeLayout
+                    android:id="@+id/feedbackCell"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/formItemHeight"
+                    android:layout_marginTop="@dimen/marginNormal"
+                    android:layout_marginBottom="@dimen/marginSmall"
+                    android:paddingEnd="@dimen/marginSmall"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:background="@drawable/rounded_corners_white_10">
+
+                <ImageView
+                        android:id="@+id/walletImage"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/wallet"
+                        android:tint="@color/secondaryColor"
+                />
+
+                <TextView
+                        style="@style/BoldFont"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/walletImage"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/marginLessSmall"
+                        android:text="@string/my_wallet"/>
+
+
+                <TextView
+                        android:id="@+id/wallet_amount"
+                        style="@style/BoldFont"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondaryTextColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="$0"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/background"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/formItemHeight"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:paddingEnd="@dimen/marginSmall"
+                    android:elevation="1dp"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:layout_marginBottom="@dimen/marginLessSmall"
+                    android:onClick="openPreviousOrders">
+
+                <ImageView
+                        android:id="@+id/previousImage"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/history"
+                        android:tint="@color/secondaryColor"
+                />
+
+                <TextView
+                        style="@style/BoldFont"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/previousImage"
+                        android:layout_marginStart="@dimen/marginLessSmall"
+                        android:text="@string/previous_orders"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/background"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:id="@+id/shareCell"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/formItemHeight"
+                    android:layout_marginBottom="@dimen/marginLessSmall"
+                    android:elevation="1dp"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:paddingEnd="@dimen/marginSmall"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:onClick="openMyAddresses">
+
+                <ImageView
+                        android:id="@+id/addressImage"
+                        android:layout_width="20dp"
+                        android:layout_height="21dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/pin_dark"
+                        android:tint="@color/secondaryColor"
+                />
+
+                <TextView
+                        style="@style/BoldFont"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/marginLessSmall"
+                        android:layout_toEndOf="@id/addressImage"
+                        android:text="@string/my_addresses"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/background"/>
+            </RelativeLayout>
+
+            <!-- <RelativeLayout
+                 android:id="@+id/faqCell"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/formItemHeight"
+                 android:background="@drawable/rounded_corners_white_10"
+                 android:paddingStart="@dimen/marginSmall"
+                 android:paddingEnd="@dimen/marginSmall"
+                 android:layout_marginBottom="@dimen/marginLessSmall"
+                 android:elevation="1dp"
+                 android:onClick="openMyPaymentMethods">
+
+                 <ImageView
+                     android:id="@+id/paymentImage"
+                     android:layout_width="20dp"
+                     android:layout_height="20dp"
+                     android:layout_centerVertical="true"
+                     android:src="@drawable/payments"
+                     android:tint="@color/secondaryColor"
+                     />
+
+                 <TextView
+                     style="@style/BoldFont"
+                     android:textSize="16sp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_toEndOf="@id/paymentImage"
+                     android:layout_marginStart="@dimen/marginLessSmall"
+                     android:text="@string/payment_methods" />
+
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_alignParentBottom="true"
+                     android:background="@color/background" />
+             </RelativeLayout>-->
+
+
+            <RelativeLayout
+                    android:id="@+id/call_support"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/formItemHeight"
+                    android:layout_marginBottom="@dimen/marginLessSmall"
+                    android:elevation="1dp"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:paddingEnd="@dimen/marginSmall"
+                    android:onClick="onCallSupportClick">
+
+                <ImageView
+                        android:id="@+id/supportImage"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/support"
+                        android:tint="@color/secondaryColor"
+                />
+
+                <TextView
+                        style="@style/BoldFont"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/supportImage"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/marginLessSmall"
+                        android:text="@string/contact_us"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/formItemHeight"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:paddingEnd="@dimen/marginSmall"
+                    android:layout_marginBottom="@dimen/marginLessSmall"
+                    android:elevation="1dp"
+                    android:onClick="openSettings">
+
+                <ImageView
+                        android:id="@+id/settingsImage"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/advanced"
+                        android:tint="@color/secondaryColor"
+                />
+
+                <TextView
+                        style="@style/BoldFont"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/settingsImage"
+                        android:layout_marginStart="@dimen/marginLessSmall"
+                        android:text="@string/more_settings"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/background"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/formItemHeight"
+                    android:background="@drawable/rounded_corners_white_10"
+                    android:paddingStart="@dimen/marginSmall"
+                    android:paddingEnd="@dimen/marginSmall"
+                    android:layout_marginBottom="@dimen/marginLessSmall"
+                    android:elevation="1dp"
+                    android:onClick="logout">
+
+                <ImageView
+                        android:id="@+id/logoutImage"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/logout"
+                        android:tint="@color/secondaryColor"
+                />
+
+                <TextView
+                        style="@style/BoldFont"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/logoutImage"
+                        android:layout_marginStart="@dimen/marginLessSmall"
+                        android:text="@string/logout"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/background"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
